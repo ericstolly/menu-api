@@ -72,14 +72,14 @@ Making a menu update/refresh is quickly done by overriding the `getUpdateType(Bu
 ### Buttons
 We have provided you with `SimpleButton#` to speed up development using this Framework. We have provided you an example below.
 ```java
-new SimpleButton(new ItemBuilder(Material.DIRT).build(), false, null);
+new SimpleButton(new ItemstackBuilder(Material.DIRT).build(), false, null);
 ```
 
 Buttons can also have a listener attached to them. This can be in an in-line or seperate class style or simply set to null if not required. We have provided you an example below.
 ```java
 // In-line style
 
-new SimpleButton(new ItemBuilder(Material.DIRT).build(), false, (InventoryClickEvent event) -> { 
+new SimpleButton(new ItemstackBuilder(Material.DIRT).build(), false, (InventoryClickEvent event) -> { 
             event.getWhoClicked().sendMessage("Hello World from inline class!");
         });
 ```
