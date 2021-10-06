@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ericstolly</groupId>
+	<artifactId>menu</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>menu</name>
+	<description>A very rudimentary and user-friendly Bukkit menu framework.</description>
+
+	<properties>
+		<!-- Ensure compiler Java Runtime Environment is set to Java 1.8 -->
+		<java.version>1.8</java.version>
+
+		<!-- Ensure compiler Java compliance level is set to Java 1.8 -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<!-- Ensure file encoder is set to UTF-8 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>elmakers</id>
+			<url>https://maven.elmakers.com/repository/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<!-- Spigot Dependencies -->
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.8.8-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
+    	<!-- Utility Dependencies -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+	</dependencies>
+</project>
