@@ -21,11 +21,11 @@ public class MenuListener implements Listener {
 			Player player = (Player) event.getWhoClicked();
 			Menu menu = Menu.getByPlayer(player);
 			
-			// Make sure player has an open menu.
-			if (menu == null) return;
-			
 			// Make sure the inventory said player clicked in, actually exists.
 			if (event.getClickedInventory() == null) return;
+			
+			// Make sure player has an open menu.
+			if (menu == null) return;
 			
 			// Make sure the player isn't just clicking on his own inventory.
 			if (event.getClickedInventory().getType() == InventoryType.PLAYER) return;
