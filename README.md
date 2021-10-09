@@ -3,7 +3,7 @@
   
   ![Licence](https://img.shields.io/github/license/ericstolly/menu-api?style=for-the-badge)
  
-   <a href="https://github.com/ericstolly/menu-api/stargazers"><img src="https://img.shields.io/github/stars/ericstolly/menu-api" alt="Stars Badge"/></a>
+  <a href="https://github.com/ericstolly/menu-api/stargazers"><img src="https://img.shields.io/github/stars/ericstolly/menu-api" alt="Stars Badge"/></a>
   <a href="https://github.com/ericstolly/menu-api/network/members"><img src="https://img.shields.io/github/forks/ericstolly/menu-api" alt="Forks Badge"/></a>
   <a href="https://github.com/ericstolly/menu-api/pulls"><img src="https://img.shields.io/github/issues-pr/ericstolly/menu-api" alt="Pull Requests Badge"/></a>
   <a href="https://github.com/ericstolly/menu-api/issues"><img src="https://img.shields.io/github/issues/ericstolly/menu-api" alt="Issues Badge"/></a>
@@ -30,7 +30,7 @@ DROPPER;
 
 ### Update Types
 There are 3 update modes that control how menus are updated/refreshed on your server.
-These can be found in `ButtonUpdateType#`.
+These can be found in `MenuUpdateType#`.
 ```java
 RUNNABLE (Repeating task every x amount of time),
 ON_CLICK (Only when someone clicks a button),
@@ -65,7 +65,7 @@ public class ExampleMenu extends Menu {
 }
 ```
 
-Making a menu update/refresh is quickly done by overriding the `getUpdateType(ButtonUpdateType)#`. To disable all update/refreshing of buttons you simply have to remove the overriding method. It will default to `ButtonUpdateType.NONE`.
+Making a menu update/refresh is quickly done by overriding the `getUpdateType(MenuUpdateType)#`. To disable all update/refreshing of buttons you simply have to remove the overriding method. It will default to `MenuUpdateType.NONE`.
 
 </br>
 

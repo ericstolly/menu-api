@@ -1,4 +1,4 @@
-package com.ericstolly.menu;
+package com.ericstolly.menu.menu;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,8 +12,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
 import com.ericstolly.menu.button.MenuButton;
-import com.ericstolly.menu.button.update.ButtonUpdateTask;
-import com.ericstolly.menu.button.update.ButtonUpdateType;
+import com.ericstolly.menu.menu.update.MenuUpdateTask;
+import com.ericstolly.menu.menu.update.MenuUpdateType;
 import com.ericstolly.menu.type.MenuType;
 
 import lombok.Getter;
@@ -72,8 +72,8 @@ public abstract class Menu {
 			player.openInventory(inventory);
 			
 			// Creates new runnable if applicable.
-			if (getUpdateType().equals(ButtonUpdateType.RUNNABLE)) {
-				updateRunnable = new ButtonUpdateTask(player, this).runTaskTimer(owningPlugin, 20L, 20L);	
+			if (getUpdateType().equals(MenuUpdateType.RUNNABLE)) {
+				updateRunnable = new MenuUpdateTask(player, this).runTaskTimer(owningPlugin, 20L, 20L);	
 			}
 			
 			// Adds menu to list of opened menus.
@@ -87,8 +87,8 @@ public abstract class Menu {
 	
 	public abstract MenuType getMenuType();
 	
-	public ButtonUpdateType getUpdateType() {
-		return ButtonUpdateType.NONE;
+	public MenuUpdateType getUpdateType() {
+		return MenuUpdateType.NONE;
 	}
 	
 	public static Menu getByPlayer(final @NonNull Player player) {

@@ -1,4 +1,4 @@
-package com.ericstolly.menu;
+package com.ericstolly.menu.menu;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,7 +10,7 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryType;
 
 import com.ericstolly.menu.button.MenuButton;
-import com.ericstolly.menu.button.update.ButtonUpdateType;
+import com.ericstolly.menu.menu.update.MenuUpdateType;
 
 public class MenuListener implements Listener {
 	
@@ -42,7 +42,7 @@ public class MenuListener implements Listener {
 			if (button == null) return;
 			
 			// Prevent editing non-editable buttons, any button inside an autoupdating menu and buttons with a listener..
-			if (!button.isEditable(player) || !menu.getUpdateType().equals(ButtonUpdateType.NONE) || (button.getButtonListener(player) != null)) {
+			if (!button.isEditable(player) || !menu.getUpdateType().equals(MenuUpdateType.NONE) || (button.getButtonListener(player) != null)) {
 				event.setCancelled(true);
 			}
 			
@@ -54,7 +54,7 @@ public class MenuListener implements Listener {
 			}
 			
 			// Update menu on clicked if set to do so.
-			if (menu.getUpdateType().equals(ButtonUpdateType.ON_CLICK)) {
+			if (menu.getUpdateType().equals(MenuUpdateType.ON_CLICK)) {
 				menu.open(player, true);
 			}
 			

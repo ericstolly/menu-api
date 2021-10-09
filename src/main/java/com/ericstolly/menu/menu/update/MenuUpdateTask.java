@@ -1,14 +1,14 @@
-package com.ericstolly.menu.button.update;
+package com.ericstolly.menu.menu.update;
 
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import com.ericstolly.menu.Menu;
+import com.ericstolly.menu.menu.Menu;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class ButtonUpdateTask extends BukkitRunnable {
+public class MenuUpdateTask extends BukkitRunnable {
 	
 	public Player player;
 	public Menu menu;
