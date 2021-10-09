@@ -28,11 +28,12 @@ public abstract class Menu {
 	
 	@Getter public static Map<Player, Menu> openedMenus = new HashMap<Player, Menu>();
 	
-	// This is used to add compatibility to people who are using the plugin in a .jar format.
+	// Used to add compatibility to people who are using the plugin in a .jar format.
 	public Menu(final @NonNull JavaPlugin owningPlugin) {
 		this.owningPlugin = owningPlugin;
 	}
 	
+	// Used to open a menu without an extra boolean.
 	public void open(final @NonNull Player player) {
 		open(player, false);
 	}
