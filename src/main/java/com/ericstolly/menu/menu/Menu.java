@@ -12,9 +12,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
 import com.ericstolly.menu.button.MenuButton;
+import com.ericstolly.menu.menu.type.MenuType;
 import com.ericstolly.menu.menu.update.MenuUpdateTask;
 import com.ericstolly.menu.menu.update.MenuUpdateType;
-import com.ericstolly.menu.type.MenuType;
 
 import lombok.Getter;
 import lombok.NonNull;

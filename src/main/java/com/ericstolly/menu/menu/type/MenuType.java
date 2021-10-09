@@ -1,4 +1,4 @@
-package com.ericstolly.menu.type;
+package com.ericstolly.menu.menu.type;
 
 import org.bukkit.event.inventory.InventoryType;
 
