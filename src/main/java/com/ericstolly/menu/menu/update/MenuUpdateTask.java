@@ -10,8 +10,8 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class MenuUpdateTask extends BukkitRunnable {
 	
-	public Player player;
-	public Menu menu;
+	public final Player player;
+	public final Menu menu;
 	
 	public void run() {
 		menu.open(player, true);
