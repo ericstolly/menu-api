@@ -24,7 +24,7 @@
 <dependency>
     <groupId>com.github.ericstolly</groupId>
     <artifactId>menu-api</artifactId>
-    <version>-4e612a10f3-1</version>
+    <version>Tag</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -39,7 +39,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.ericstolly:menu-api:-4e612a10f3-1'
+    implementation 'com.github.ericstolly:menu-api:Tag'
 }
 ```
 
