@@ -24,7 +24,7 @@
 <dependency>
     <groupId>com.github.ericstolly</groupId>
     <artifactId>menu-api</artifactId>
-    <version>Tag</version>
+    <version>-b86620c97e-1</version>
     <scope>compile</scope>
 </dependency>
 ```
