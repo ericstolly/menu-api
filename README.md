@@ -10,6 +10,39 @@
   <a href="https://github.com/ericstolly/menu-api/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ericstolly/menu-api?color=2b9348"></a>
 </div>
 
+## Installation
+
+### Maven
+```xml
+<repositories>
+  <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.ericstolly</groupId>
+    <artifactId>menu-api</artifactId>
+    <version>-4e612a10f3-1</version>
+    <scope>compile</scope>
+</dependency>
+```
+
+### Gradle
+```gradle
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+dependencies {
+    implementation 'com.github.ericstolly:menu-api:-4e612a10f3-1'
+}
+```
+
 ## Usage
 
 ### Menu Types
@@ -72,14 +105,14 @@ Making a menu update/refresh is quickly done by overriding the `getUpdateType(Me
 ### Buttons
 We have provided you with `SimpleButton#` to speed up development using this Framework. We have provided you an example below.
 ```java
-new SimpleButton(new ItemBuilder(Material.DIRT).build(), false, null);
+new SimpleButton(new ItemstackBuilder(Material.DIRT).build(), false, null);
 ```
 
 Buttons can also have a listener attached to them. This can be in an in-line or seperate class style or simply set to null if not required. We have provided you an example below.
 ```java
 // In-line style
 
-new SimpleButton(new ItemBuilder(Material.DIRT).build(), false, (InventoryClickEvent event) -> { 
+new SimpleButton(new ItemstackBuilder(Material.DIRT).build(), false, (InventoryClickEvent event) -> { 
             event.getWhoClicked().sendMessage("Hello World from inline class!");
         });
 ```
