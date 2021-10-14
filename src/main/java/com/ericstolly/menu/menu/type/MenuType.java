@@ -4,11 +4,13 @@ import org.bukkit.event.inventory.InventoryType;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @AllArgsConstructor
 public enum MenuType {
 	
+	AUTOMATIC_ROW_CHEST(InventoryType.CHEST, -1),
 	SINGLE_ROW_CHEST(InventoryType.CHEST, 9),
 	DOUBLE_ROW_CHEST(InventoryType.CHEST, 18),
 	TRIPPLE_ROW_CHEST(InventoryType.CHEST, 27),
@@ -21,5 +23,5 @@ public enum MenuType {
 	DROPPER(InventoryType.DROPPER, 9);
 	
 	public InventoryType inventoryType;
-	public int size;
+	@Setter public int size;
 }

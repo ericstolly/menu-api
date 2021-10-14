@@ -46,6 +46,14 @@ public abstract class Menu {
 			title = title.substring(0, 32);
 		}
 		
+		// Updates the menu size if AUTOMATIC_ROW_CHEST is in use.
+		if (getMenuType().equals(MenuType.AUTOMATIC_ROW_CHEST)) {
+			getMenuType().setSize((getButtons(player).size() + 9) / 9 * 9);
+			
+			// Prevents opening a menu that has a bigger size than Minecraft can display. 
+			if (getMenuType().getSize() > 54) return;
+		}
+		
 		// Prevents opening a menu that has more buttons that it can physically fit.
 		if (getButtons(player).size() > getMenuType().getSize()) return;
 		

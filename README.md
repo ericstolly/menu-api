@@ -49,6 +49,7 @@ dependencies {
 There are plenty of menu types you can pick from to star in your next product with many more in the works.
 These can be found in `MenuType#`.
 ```java
+AUTOMATIC_ROW_CHEST (Automatic)
 SINGLE_ROW_CHEST (1 Row),
 DOUBLE_ROW_CHEST (2 Rows),
 TRIPPLE_ROW_CHEST (3 Rows),
